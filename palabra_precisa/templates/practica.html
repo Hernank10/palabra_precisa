@@ -1,0 +1,371 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .practica-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .exercise-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+        animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .exercise-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #f0f0f0;
+    }
+    
+    .exercise-category {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    
+    .exercise-points {
+        background: #f8f9fa;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+        color: #28a745;
+    }
+    
+    .exercise-question {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        color: #333;
+        line-height: 1.6;
+    }
+    
+    .options-container {
+        margin: 20px 0;
+    }
+    
+    .option-item {
+        background: #f8f9fa;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+    }
+    
+    .option-item:hover {
+        background: white;
+        border-color: #667eea;
+        transform: translateX(10px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+    }
+    
+    .option-item.selected {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-color: transparent;
+        color: white;
+    }
+    
+    .option-item.correct {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        border-color: transparent;
+        color: white;
+    }
+    
+    .option-item.incorrect {
+        background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+        border-color: transparent;
+        color: white;
+    }
+    
+    .option-marker {
+        width: 30px;
+        height: 30px;
+        background: rgba(0,0,0,0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-weight: bold;
+    }
+    
+    .selected .option-marker {
+        background: rgba(255,255,255,0.2);
+        color: white;
+    }
+    
+    .feedback-message {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        animation: slideIn 0.3s ease;
+    }
+    
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .feedback-correct {
+        background: #d4edda;
+        color: #155724;
+        border-left: 4px solid #28a745;
+    }
+    
+    .feedback-incorrect {
+        background: #f8d7da;
+        color: #721c24;
+        border-left: 4px solid #dc3545;
+    }
+    
+    .progress-bar-container {
+        background: #f0f0f0;
+        height: 10px;
+        border-radius: 5px;
+        margin: 20px 0;
+        overflow: hidden;
+    }
+    
+    .progress-bar-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        transition: width 0.3s ease;
+    }
+    
+    .stats-badge {
+        background: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    
+    .timer {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #667eea;
+    }
+    
+    .explanation-box {
+        background: #e3f2fd;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        border-left: 4px solid #2196f3;
+    }
+</style>
+
+<div class="practica-container">
+    <h1 class="text-center mb-4">📝 Práctica de Ejercicios</h1>
+    
+    <!-- Barra de progreso -->
+    <div class="stats-badge">
+        <div class="d-flex justify-content-between">
+            <span>Ejercicio <span id="currentExercise">1</span>/<span id="totalExercises">{{ total }}</span></span>
+            <span class="ms-3">Puntuación: <span id="currentScore">{{ current_user.puntos_totales }}</span></span>
+            <span class="ms-3">Racha: <span id="currentStreak">{{ current_user.racha_actual }}</span> 🔥</span>
+        </div>
+    </div>
+    
+    <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progressBar" style="width: {{ (1/total*100) if total > 0 else 0 }}%"></div>
+    </div>
+    
+    <!-- Ejercicio actual -->
+    <div class="exercise-card" id="exerciseCard">
+        <div class="exercise-header">
+            <span class="exercise-category" id="exerciseCategory">{{ ejercicios[0].categoria if ejercicios else 'Categoría' }}</span>
+            <span class="exercise-points" id="exercisePoints">{{ ejercicios[0].puntos if ejercicios else 0 }} pts</span>
+        </div>
+        
+        <div class="exercise-question" id="exerciseQuestion">
+            {{ ejercicios[0].pregunta if ejercicios else 'No hay ejercicios disponibles' }}
+        </div>
+        
+        <div class="options-container" id="optionsContainer">
+            {% if ejercicios and ejercicios[0].opciones %}
+                {% for opcion in ejercicios[0].opciones %}
+                <div class="option-item" onclick="selectOption(this)" data-option="{{ opcion }}">
+                    <span class="option-marker">{{ ['A', 'B', 'C', 'D'][loop.index0] }}</span>
+                    {{ opcion }}
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+        <!-- Feedback -->
+        <div id="feedbackContainer" style="display: none;"></div>
+        
+        <!-- Botones -->
+        <div class="d-flex justify-content-between mt-4">
+            <button class="btn btn-outline-primary" onclick="checkAnswer()" id="checkBtn">
+                Verificar respuesta
+            </button>
+            <button class="btn btn-primary" onclick="nextExercise()" id="nextBtn" style="display: none;">
+                Siguiente ejercicio →
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+let currentExerciseIndex = 0;
+let exercises = {{ ejercicios|tojson }};
+let totalExercises = {{ total }};
+let selectedOption = null;
+let score = {{ current_user.puntos_totales }};
+let streak = {{ current_user.racha_actual }};
+
+function selectOption(element) {
+    // Remover selección anterior
+    document.querySelectorAll('.option-item').forEach(opt => {
+        opt.classList.remove('selected');
+    });
+    
+    // Seleccionar nueva opción
+    element.classList.add('selected');
+    selectedOption = element.getAttribute('data-option');
+}
+
+function checkAnswer() {
+    if (!selectedOption) {
+        alert('Por favor, selecciona una opción');
+        return;
+    }
+    
+    const exercise = exercises[currentExerciseIndex];
+    const isCorrect = selectedOption === exercise.respuesta_correcta;
+    const feedbackContainer = document.getElementById('feedbackContainer');
+    const checkBtn = document.getElementById('checkBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    // Marcar opciones como correctas/incorrectas
+    document.querySelectorAll('.option-item').forEach(opt => {
+        opt.style.pointerEvents = 'none';
+        if (opt.getAttribute('data-option') === exercise.respuesta_correcta) {
+            opt.classList.add('correct');
+        } else if (opt.classList.contains('selected') && !isCorrect) {
+            opt.classList.add('incorrect');
+        }
+    });
+    
+    // Mostrar feedback
+    feedbackContainer.style.display = 'block';
+    
+    if (isCorrect) {
+        const points = exercise.puntos || 10;
+        score += points;
+        streak += 1;
+        
+        feedbackContainer.innerHTML = `
+            <div class="feedback-message feedback-correct">
+                <strong>✅ ¡Correcto!</strong><br>
+                +${points} puntos<br>
+                <small>${exercise.explicacion || '¡Bien hecho!'}</small>
+            </div>
+        `;
+        
+        // Animación de confeti
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+    } else {
+        streak = 0;
+        
+        feedbackContainer.innerHTML = `
+            <div class="feedback-message feedback-incorrect">
+                <strong>❌ Incorrecto</strong><br>
+                La respuesta correcta es: <strong>${exercise.respuesta_correcta}</strong><br>
+                <small>${exercise.explicacion || ''}</small>
+            </div>
+        `;
+    }
+    
+    // Actualizar puntuación y racha
+    document.getElementById('currentScore').textContent = score;
+    document.getElementById('currentStreak').textContent = streak;
+    
+    // Ocultar botón de verificar, mostrar siguiente
+    checkBtn.style.display = 'none';
+    nextBtn.style.display = 'block';
+}
+
+function nextExercise() {
+    currentExerciseIndex++;
+    
+    if (currentExerciseIndex < totalExercises) {
+        // Cargar siguiente ejercicio
+        const exercise = exercises[currentExerciseIndex];
+        
+        document.getElementById('exerciseCategory').textContent = exercise.categoria;
+        document.getElementById('exerciseQuestion').textContent = exercise.pregunta;
+        document.getElementById('exercisePoints').textContent = exercise.puntos + ' pts';
+        document.getElementById('currentExercise').textContent = currentExerciseIndex + 1;
+        
+        // Actualizar barra de progreso
+        const progress = ((currentExerciseIndex + 1) / totalExercises) * 100;
+        document.getElementById('progressBar').style.width = progress + '%';
+        
+        // Recargar opciones
+        const optionsContainer = document.getElementById('optionsContainer');
+        optionsContainer.innerHTML = '';
+        
+        exercise.opciones.forEach((opcion, index) => {
+            const letters = ['A', 'B', 'C', 'D'];
+            optionsContainer.innerHTML += `
+                <div class="option-item" onclick="selectOption(this)" data-option="${opcion}">
+                    <span class="option-marker">${letters[index]}</span>
+                    ${opcion}
+                </div>
+            `;
+        });
+        
+        // Resetear UI
+        document.getElementById('feedbackContainer').style.display = 'none';
+        document.getElementById('feedbackContainer').innerHTML = '';
+        document.getElementById('checkBtn').style.display = 'block';
+        document.getElementById('nextBtn').style.display = 'none';
+        selectedOption = null;
+        
+    } else {
+        // Práctica completada
+        window.location.href = '/resultados/' + {{ practica_id if practica_id else 0 }};
+    }
+}
+
+// Enviar resultados al servidor cuando se complete
+window.addEventListener('beforeunload', function() {
+    // Guardar progreso
+    fetch('/api/guardar_progreso', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            score: score,
+            streak: streak,
+            completed: currentExerciseIndex
+        })
+    });
+});
+</script>
+{% endblock %}
