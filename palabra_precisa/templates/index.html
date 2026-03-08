@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">🎯 Bienvenido a Palabra Precisa</h1>
+    <p class="lead">Domina el uso preciso del lenguaje con ejercicios interactivos y seguimiento de progreso.</p>
+    <hr class="my-4">
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">📊 Estadísticas</h5>
+                    <p class="display-4">{{ stats.total }}</p>
+                    <p>Ejercicios disponibles</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">📚 Categorías</h5>
+                    <p class="display-4">{{ stats.por_categoria.keys()|list|length }}</p>
+                    <p>Temas diferentes</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">🏆 Puntos</h5>
+                    <p class="display-4">{{ stats.total_puntos }}</p>
+                    <p>Puntos disponibles</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-4">
+        <a class="btn btn-primary btn-lg" href="/practica" role="button">
+            🚀 Comenzar a practicar
+        </a>
+        {% if not current_user.is_authenticated %}
+            <a class="btn btn-success btn-lg" href="/registro" role="button">
+                📝 Registrarse
+            </a>
+        {% endif %}
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12">
+        <h3>Categorías disponibles:</h3>
+        <div class="row">
+            {% for categoria, cantidad in stats.por_categoria.items() %}
+            <div class="col-md-3 mb-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h5>{{ categoria }}</h5>
+                        <p>{{ cantidad }} ejercicios</p>
+                        <a href="/practica?categoria={{ categoria }}" class="btn btn-sm btn-outline-primary">
+                            Practicar
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

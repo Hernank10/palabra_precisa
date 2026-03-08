@@ -1,0 +1,1002 @@
+[
+  {
+    "id": 1,
+    "nivel": 1,
+    "categoria": "Prefijos",
+    "pregunta": "¿Cuál es el prefijo que significa 'anterior'?",
+    "respuesta_correcta": "ante",
+    "pista": "Empieza con 'a' y termina con 'e'",
+    "explicacion": "'ante-' indica anterioridad en tiempo o lugar",
+    "puntos": 10
+  },
+  {
+    "id": 2,
+    "nivel": 1,
+    "categoria": "Prefijos",
+    "pregunta": "¿Qué prefijo significa 'contra' u 'oposición'?",
+    "respuesta_correcta": "anti",
+    "pista": "Es el prefijo usado en 'antivirus'",
+    "explicacion": "'anti-' expresa oposición o contrariedad",
+    "puntos": 10
+  },
+  {
+    "id": 3,
+    "nivel": 1,
+    "categoria": "Frecuencia",
+    "pregunta": "¿Cómo se dice 'cada dos meses'?",
+    "respuesta_correcta": "bimestral",
+    "pista": "Empieza con 'bi' y termina con 'al'",
+    "explicacion": "Bimestral = cada dos meses, bimensual = dos veces al mes",
+    "puntos": 10
+  },
+  {
+    "id": 4,
+    "nivel": 1,
+    "categoria": "Frecuencia",
+    "pregunta": "¿Cómo se dice 'dos veces al mes'?",
+    "respuesta_correcta": "bimensual",
+    "pista": "Termina en 'ual' como 'anual'",
+    "explicacion": "Bimensual = dos veces al mes, bimestral = cada dos meses",
+    "puntos": 10
+  },
+  {
+    "id": 5,
+    "nivel": 2,
+    "categoria": "Verbos",
+    "pregunta": "Verbo que significa 'anular' o 'derogar' (no pagar)",
+    "respuesta_correcta": "cancelar",
+    "pista": "Se usa en 'cancelar una suscripción'",
+    "explicacion": "'Cancelar' NO es pagar, es anular",
+    "puntos": 15
+  },
+  {
+    "id": 6,
+    "nivel": 2,
+    "categoria": "Verbos",
+    "pregunta": "Verbo que significa 'dar el precio' (no preguntar)",
+    "respuesta_correcta": "cotizar",
+    "pista": "Lo hace un vendedor, no un comprador",
+    "explicacion": "Cotizar es fijar o dar un precio",
+    "puntos": 15
+  },
+  {
+    "id": 7,
+    "nivel": 2,
+    "categoria": "Verbos",
+    "pregunta": "Expresa probabilidad: 'Él ______ haber llegado tarde'",
+    "respuesta_correcta": "debe de",
+    "pista": "Son dos palabras, la segunda es 'de'",
+    "explicacion": "'debe de' = probabilidad, 'debe' = obligación",
+    "puntos": 15
+  },
+  {
+    "id": 8,
+    "nivel": 2,
+    "categoria": "Gentilicios",
+    "pregunta": "Persona de Escocia (no es inglés)",
+    "respuesta_correcta": "británico",
+    "pista": "Incluye a ingleses, escoceses y galeses",
+    "explicacion": "Los escoceses son británicos, pero no ingleses",
+    "puntos": 15
+  },
+  {
+    "id": 9,
+    "nivel": 3,
+    "categoria": "Sustantivos",
+    "pregunta": "Universidad como fuente de saber (en latín)",
+    "respuesta_correcta": "alma mater",
+    "pista": "Significa 'madre nutricia'",
+    "explicacion": "Alma mater se refiere a la universidad donde uno estudió",
+    "puntos": 20
+  },
+  {
+    "id": 10,
+    "nivel": 3,
+    "categoria": "Sustantivos",
+    "pregunta": "Profesor jubilado con honores",
+    "respuesta_correcta": "emérito",
+    "pista": "No confundir con 'meritorio'",
+    "explicacion": "Emérito = jubilado con honores, meritorio = que tiene mérito",
+    "puntos": 20
+  },
+  {
+    "id": 11,
+    "nivel": 3,
+    "categoria": "Verbos",
+    "pregunta": "Lleva consigo, implica condiciones (no consecuencias)",
+    "respuesta_correcta": "conlleva",
+    "pista": "Se usa: 'Esto ______ responsabilidades'",
+    "explicacion": "'Conlleva' implica condiciones, 'lleva a' expresa consecuencias",
+    "puntos": 20
+  },
+  {
+    "id": 12,
+    "nivel": 3,
+    "categoria": "Sustantivos",
+    "pregunta": "Desarmar un carro en partes",
+    "respuesta_correcta": "desguazar",
+    "pista": "No es 'deshuesar' (eso es para frutas)",
+    "explicacion": "Desguazar = desarmar, deshuesar = quitar huesos",
+    "puntos": 20
+  },
+  {
+    "id": 13,
+    "nivel": 4,
+    "categoria": "Gramática",
+    "pregunta": "Conjunción que equivale a 'así que' (una palabra)",
+    "respuesta_correcta": "conque",
+    "pista": "No confundir con 'con qué' (pregunta)",
+    "explicacion": "'Conque' = así que, 'con qué' = con qué cosa",
+    "puntos": 25
+  },
+  {
+    "id": 14,
+    "nivel": 4,
+    "categoria": "Gramática",
+    "pregunta": "Plural de 'régimen'",
+    "respuesta_correcta": "regímenes",
+    "pista": "Lleva tilde en la i",
+    "explicacion": "El plural de régimen es regímenes",
+    "puntos": 25
+  },
+  {
+    "id": 15,
+    "nivel": 4,
+    "categoria": "Gramática",
+    "pregunta": "Plural de 'carácter'",
+    "respuesta_correcta": "caracteres",
+    "pista": "No lleva tilde",
+    "explicacion": "Carácter → caracteres (sin tilde)",
+    "puntos": 25
+  },
+  {
+    "id": 16,
+    "nivel": 4,
+    "categoria": "Ciencia",
+    "pregunta": "Unidad básica de la materia",
+    "respuesta_correcta": "átomo",
+    "pista": "Empieza con 'a' y termina con 'o'",
+    "explicacion": "El átomo es la unidad básica de la materia",
+    "puntos": 15
+  },
+  {
+    "id": 17,
+    "nivel": 4,
+    "categoria": "Ciencia",
+    "pregunta": "Unidad básica de la vida",
+    "respuesta_correcta": "célula",
+    "pista": "Todas las formas de vida la tienen",
+    "explicacion": "La célula es la unidad básica de los seres vivos",
+    "puntos": 15
+  },
+  {
+    "id": 18,
+    "nivel": 5,
+    "categoria": "Derecho",
+    "pregunta": "Decisiones judiciales que sientan precedente",
+    "respuesta_correcta": "jurisprudencia",
+    "pista": "No es legislación (son leyes escritas)",
+    "explicacion": "La jurisprudencia son decisiones de tribunales que establecen precedentes",
+    "puntos": 30
+  },
+  {
+    "id": 19,
+    "nivel": 5,
+    "categoria": "Derecho",
+    "pregunta": "Quien da algo en alquiler",
+    "respuesta_correcta": "arrendador",
+    "pista": "Termina en 'dor' (el que hace la acción)",
+    "explicacion": "Arrendador = dueño que alquila, arrendatario = inquilino",
+    "puntos": 20
+  },
+  {
+    "id": 20,
+    "nivel": 5,
+    "categoria": "Derecho",
+    "pregunta": "Quien recibe algo en alquiler",
+    "respuesta_correcta": "arrendatario",
+    "pista": "Termina en 'tario' (el que recibe)",
+    "explicacion": "Arrendatario = inquilino, arrendador = dueño",
+    "puntos": 20
+  },
+  {
+    "id": 21,
+    "nivel": 1,
+    "categoria": "Prefijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #21)?",
+    "respuesta_correcta": "respuesta_ejemplo_21",
+    "pista": "Pista para la flashcard 21",
+    "explicacion": "Explicación detallada para la flashcard 21",
+    "puntos": 10
+  },
+  {
+    "id": 22,
+    "nivel": 2,
+    "categoria": "Sufijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #22)?",
+    "respuesta_correcta": "respuesta_ejemplo_22",
+    "pista": "Pista para la flashcard 22",
+    "explicacion": "Explicación detallada para la flashcard 22",
+    "puntos": 20
+  },
+  {
+    "id": 23,
+    "nivel": 3,
+    "categoria": "Verbos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #23)?",
+    "respuesta_correcta": "respuesta_ejemplo_23",
+    "pista": "Pista para la flashcard 23",
+    "explicacion": "Explicación detallada para la flashcard 23",
+    "puntos": 30
+  },
+  {
+    "id": 24,
+    "nivel": 4,
+    "categoria": "Sustantivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #24)?",
+    "respuesta_correcta": "respuesta_ejemplo_24",
+    "pista": "Pista para la flashcard 24",
+    "explicacion": "Explicación detallada para la flashcard 24",
+    "puntos": 40
+  },
+  {
+    "id": 25,
+    "nivel": 5,
+    "categoria": "Adjetivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #25)?",
+    "respuesta_correcta": "respuesta_ejemplo_25",
+    "pista": "Pista para la flashcard 25",
+    "explicacion": "Explicación detallada para la flashcard 25",
+    "puntos": 50
+  },
+  {
+    "id": 26,
+    "nivel": 1,
+    "categoria": "Gramática",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #26)?",
+    "respuesta_correcta": "respuesta_ejemplo_26",
+    "pista": "Pista para la flashcard 26",
+    "explicacion": "Explicación detallada para la flashcard 26",
+    "puntos": 10
+  },
+  {
+    "id": 27,
+    "nivel": 2,
+    "categoria": "Ortografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #27)?",
+    "respuesta_correcta": "respuesta_ejemplo_27",
+    "pista": "Pista para la flashcard 27",
+    "explicacion": "Explicación detallada para la flashcard 27",
+    "puntos": 20
+  },
+  {
+    "id": 28,
+    "nivel": 3,
+    "categoria": "Ciencia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #28)?",
+    "respuesta_correcta": "respuesta_ejemplo_28",
+    "pista": "Pista para la flashcard 28",
+    "explicacion": "Explicación detallada para la flashcard 28",
+    "puntos": 30
+  },
+  {
+    "id": 29,
+    "nivel": 4,
+    "categoria": "Historia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #29)?",
+    "respuesta_correcta": "respuesta_ejemplo_29",
+    "pista": "Pista para la flashcard 29",
+    "explicacion": "Explicación detallada para la flashcard 29",
+    "puntos": 40
+  },
+  {
+    "id": 30,
+    "nivel": 5,
+    "categoria": "Geografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #30)?",
+    "respuesta_correcta": "respuesta_ejemplo_30",
+    "pista": "Pista para la flashcard 30",
+    "explicacion": "Explicación detallada para la flashcard 30",
+    "puntos": 50
+  },
+  {
+    "id": 31,
+    "nivel": 1,
+    "categoria": "Prefijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #31)?",
+    "respuesta_correcta": "respuesta_ejemplo_31",
+    "pista": "Pista para la flashcard 31",
+    "explicacion": "Explicación detallada para la flashcard 31",
+    "puntos": 10
+  },
+  {
+    "id": 32,
+    "nivel": 2,
+    "categoria": "Sufijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #32)?",
+    "respuesta_correcta": "respuesta_ejemplo_32",
+    "pista": "Pista para la flashcard 32",
+    "explicacion": "Explicación detallada para la flashcard 32",
+    "puntos": 20
+  },
+  {
+    "id": 33,
+    "nivel": 3,
+    "categoria": "Verbos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #33)?",
+    "respuesta_correcta": "respuesta_ejemplo_33",
+    "pista": "Pista para la flashcard 33",
+    "explicacion": "Explicación detallada para la flashcard 33",
+    "puntos": 30
+  },
+  {
+    "id": 34,
+    "nivel": 4,
+    "categoria": "Sustantivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #34)?",
+    "respuesta_correcta": "respuesta_ejemplo_34",
+    "pista": "Pista para la flashcard 34",
+    "explicacion": "Explicación detallada para la flashcard 34",
+    "puntos": 40
+  },
+  {
+    "id": 35,
+    "nivel": 5,
+    "categoria": "Adjetivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #35)?",
+    "respuesta_correcta": "respuesta_ejemplo_35",
+    "pista": "Pista para la flashcard 35",
+    "explicacion": "Explicación detallada para la flashcard 35",
+    "puntos": 50
+  },
+  {
+    "id": 36,
+    "nivel": 1,
+    "categoria": "Gramática",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #36)?",
+    "respuesta_correcta": "respuesta_ejemplo_36",
+    "pista": "Pista para la flashcard 36",
+    "explicacion": "Explicación detallada para la flashcard 36",
+    "puntos": 10
+  },
+  {
+    "id": 37,
+    "nivel": 2,
+    "categoria": "Ortografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #37)?",
+    "respuesta_correcta": "respuesta_ejemplo_37",
+    "pista": "Pista para la flashcard 37",
+    "explicacion": "Explicación detallada para la flashcard 37",
+    "puntos": 20
+  },
+  {
+    "id": 38,
+    "nivel": 3,
+    "categoria": "Ciencia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #38)?",
+    "respuesta_correcta": "respuesta_ejemplo_38",
+    "pista": "Pista para la flashcard 38",
+    "explicacion": "Explicación detallada para la flashcard 38",
+    "puntos": 30
+  },
+  {
+    "id": 39,
+    "nivel": 4,
+    "categoria": "Historia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #39)?",
+    "respuesta_correcta": "respuesta_ejemplo_39",
+    "pista": "Pista para la flashcard 39",
+    "explicacion": "Explicación detallada para la flashcard 39",
+    "puntos": 40
+  },
+  {
+    "id": 40,
+    "nivel": 5,
+    "categoria": "Geografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #40)?",
+    "respuesta_correcta": "respuesta_ejemplo_40",
+    "pista": "Pista para la flashcard 40",
+    "explicacion": "Explicación detallada para la flashcard 40",
+    "puntos": 50
+  },
+  {
+    "id": 41,
+    "nivel": 1,
+    "categoria": "Prefijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #41)?",
+    "respuesta_correcta": "respuesta_ejemplo_41",
+    "pista": "Pista para la flashcard 41",
+    "explicacion": "Explicación detallada para la flashcard 41",
+    "puntos": 10
+  },
+  {
+    "id": 42,
+    "nivel": 2,
+    "categoria": "Sufijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #42)?",
+    "respuesta_correcta": "respuesta_ejemplo_42",
+    "pista": "Pista para la flashcard 42",
+    "explicacion": "Explicación detallada para la flashcard 42",
+    "puntos": 20
+  },
+  {
+    "id": 43,
+    "nivel": 3,
+    "categoria": "Verbos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #43)?",
+    "respuesta_correcta": "respuesta_ejemplo_43",
+    "pista": "Pista para la flashcard 43",
+    "explicacion": "Explicación detallada para la flashcard 43",
+    "puntos": 30
+  },
+  {
+    "id": 44,
+    "nivel": 4,
+    "categoria": "Sustantivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #44)?",
+    "respuesta_correcta": "respuesta_ejemplo_44",
+    "pista": "Pista para la flashcard 44",
+    "explicacion": "Explicación detallada para la flashcard 44",
+    "puntos": 40
+  },
+  {
+    "id": 45,
+    "nivel": 5,
+    "categoria": "Adjetivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #45)?",
+    "respuesta_correcta": "respuesta_ejemplo_45",
+    "pista": "Pista para la flashcard 45",
+    "explicacion": "Explicación detallada para la flashcard 45",
+    "puntos": 50
+  },
+  {
+    "id": 46,
+    "nivel": 1,
+    "categoria": "Gramática",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #46)?",
+    "respuesta_correcta": "respuesta_ejemplo_46",
+    "pista": "Pista para la flashcard 46",
+    "explicacion": "Explicación detallada para la flashcard 46",
+    "puntos": 10
+  },
+  {
+    "id": 47,
+    "nivel": 2,
+    "categoria": "Ortografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #47)?",
+    "respuesta_correcta": "respuesta_ejemplo_47",
+    "pista": "Pista para la flashcard 47",
+    "explicacion": "Explicación detallada para la flashcard 47",
+    "puntos": 20
+  },
+  {
+    "id": 48,
+    "nivel": 3,
+    "categoria": "Ciencia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #48)?",
+    "respuesta_correcta": "respuesta_ejemplo_48",
+    "pista": "Pista para la flashcard 48",
+    "explicacion": "Explicación detallada para la flashcard 48",
+    "puntos": 30
+  },
+  {
+    "id": 49,
+    "nivel": 4,
+    "categoria": "Historia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #49)?",
+    "respuesta_correcta": "respuesta_ejemplo_49",
+    "pista": "Pista para la flashcard 49",
+    "explicacion": "Explicación detallada para la flashcard 49",
+    "puntos": 40
+  },
+  {
+    "id": 50,
+    "nivel": 5,
+    "categoria": "Geografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #50)?",
+    "respuesta_correcta": "respuesta_ejemplo_50",
+    "pista": "Pista para la flashcard 50",
+    "explicacion": "Explicación detallada para la flashcard 50",
+    "puntos": 50
+  },
+  {
+    "id": 51,
+    "nivel": 1,
+    "categoria": "Prefijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #51)?",
+    "respuesta_correcta": "respuesta_ejemplo_51",
+    "pista": "Pista para la flashcard 51",
+    "explicacion": "Explicación detallada para la flashcard 51",
+    "puntos": 10
+  },
+  {
+    "id": 52,
+    "nivel": 2,
+    "categoria": "Sufijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #52)?",
+    "respuesta_correcta": "respuesta_ejemplo_52",
+    "pista": "Pista para la flashcard 52",
+    "explicacion": "Explicación detallada para la flashcard 52",
+    "puntos": 20
+  },
+  {
+    "id": 53,
+    "nivel": 3,
+    "categoria": "Verbos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #53)?",
+    "respuesta_correcta": "respuesta_ejemplo_53",
+    "pista": "Pista para la flashcard 53",
+    "explicacion": "Explicación detallada para la flashcard 53",
+    "puntos": 30
+  },
+  {
+    "id": 54,
+    "nivel": 4,
+    "categoria": "Sustantivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #54)?",
+    "respuesta_correcta": "respuesta_ejemplo_54",
+    "pista": "Pista para la flashcard 54",
+    "explicacion": "Explicación detallada para la flashcard 54",
+    "puntos": 40
+  },
+  {
+    "id": 55,
+    "nivel": 5,
+    "categoria": "Adjetivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #55)?",
+    "respuesta_correcta": "respuesta_ejemplo_55",
+    "pista": "Pista para la flashcard 55",
+    "explicacion": "Explicación detallada para la flashcard 55",
+    "puntos": 50
+  },
+  {
+    "id": 56,
+    "nivel": 1,
+    "categoria": "Gramática",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #56)?",
+    "respuesta_correcta": "respuesta_ejemplo_56",
+    "pista": "Pista para la flashcard 56",
+    "explicacion": "Explicación detallada para la flashcard 56",
+    "puntos": 10
+  },
+  {
+    "id": 57,
+    "nivel": 2,
+    "categoria": "Ortografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #57)?",
+    "respuesta_correcta": "respuesta_ejemplo_57",
+    "pista": "Pista para la flashcard 57",
+    "explicacion": "Explicación detallada para la flashcard 57",
+    "puntos": 20
+  },
+  {
+    "id": 58,
+    "nivel": 3,
+    "categoria": "Ciencia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #58)?",
+    "respuesta_correcta": "respuesta_ejemplo_58",
+    "pista": "Pista para la flashcard 58",
+    "explicacion": "Explicación detallada para la flashcard 58",
+    "puntos": 30
+  },
+  {
+    "id": 59,
+    "nivel": 4,
+    "categoria": "Historia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #59)?",
+    "respuesta_correcta": "respuesta_ejemplo_59",
+    "pista": "Pista para la flashcard 59",
+    "explicacion": "Explicación detallada para la flashcard 59",
+    "puntos": 40
+  },
+  {
+    "id": 60,
+    "nivel": 5,
+    "categoria": "Geografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #60)?",
+    "respuesta_correcta": "respuesta_ejemplo_60",
+    "pista": "Pista para la flashcard 60",
+    "explicacion": "Explicación detallada para la flashcard 60",
+    "puntos": 50
+  },
+  {
+    "id": 61,
+    "nivel": 1,
+    "categoria": "Prefijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #61)?",
+    "respuesta_correcta": "respuesta_ejemplo_61",
+    "pista": "Pista para la flashcard 61",
+    "explicacion": "Explicación detallada para la flashcard 61",
+    "puntos": 10
+  },
+  {
+    "id": 62,
+    "nivel": 2,
+    "categoria": "Sufijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #62)?",
+    "respuesta_correcta": "respuesta_ejemplo_62",
+    "pista": "Pista para la flashcard 62",
+    "explicacion": "Explicación detallada para la flashcard 62",
+    "puntos": 20
+  },
+  {
+    "id": 63,
+    "nivel": 3,
+    "categoria": "Verbos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #63)?",
+    "respuesta_correcta": "respuesta_ejemplo_63",
+    "pista": "Pista para la flashcard 63",
+    "explicacion": "Explicación detallada para la flashcard 63",
+    "puntos": 30
+  },
+  {
+    "id": 64,
+    "nivel": 4,
+    "categoria": "Sustantivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #64)?",
+    "respuesta_correcta": "respuesta_ejemplo_64",
+    "pista": "Pista para la flashcard 64",
+    "explicacion": "Explicación detallada para la flashcard 64",
+    "puntos": 40
+  },
+  {
+    "id": 65,
+    "nivel": 5,
+    "categoria": "Adjetivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #65)?",
+    "respuesta_correcta": "respuesta_ejemplo_65",
+    "pista": "Pista para la flashcard 65",
+    "explicacion": "Explicación detallada para la flashcard 65",
+    "puntos": 50
+  },
+  {
+    "id": 66,
+    "nivel": 1,
+    "categoria": "Gramática",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #66)?",
+    "respuesta_correcta": "respuesta_ejemplo_66",
+    "pista": "Pista para la flashcard 66",
+    "explicacion": "Explicación detallada para la flashcard 66",
+    "puntos": 10
+  },
+  {
+    "id": 67,
+    "nivel": 2,
+    "categoria": "Ortografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #67)?",
+    "respuesta_correcta": "respuesta_ejemplo_67",
+    "pista": "Pista para la flashcard 67",
+    "explicacion": "Explicación detallada para la flashcard 67",
+    "puntos": 20
+  },
+  {
+    "id": 68,
+    "nivel": 3,
+    "categoria": "Ciencia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #68)?",
+    "respuesta_correcta": "respuesta_ejemplo_68",
+    "pista": "Pista para la flashcard 68",
+    "explicacion": "Explicación detallada para la flashcard 68",
+    "puntos": 30
+  },
+  {
+    "id": 69,
+    "nivel": 4,
+    "categoria": "Historia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #69)?",
+    "respuesta_correcta": "respuesta_ejemplo_69",
+    "pista": "Pista para la flashcard 69",
+    "explicacion": "Explicación detallada para la flashcard 69",
+    "puntos": 40
+  },
+  {
+    "id": 70,
+    "nivel": 5,
+    "categoria": "Geografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #70)?",
+    "respuesta_correcta": "respuesta_ejemplo_70",
+    "pista": "Pista para la flashcard 70",
+    "explicacion": "Explicación detallada para la flashcard 70",
+    "puntos": 50
+  },
+  {
+    "id": 71,
+    "nivel": 1,
+    "categoria": "Prefijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #71)?",
+    "respuesta_correcta": "respuesta_ejemplo_71",
+    "pista": "Pista para la flashcard 71",
+    "explicacion": "Explicación detallada para la flashcard 71",
+    "puntos": 10
+  },
+  {
+    "id": 72,
+    "nivel": 2,
+    "categoria": "Sufijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #72)?",
+    "respuesta_correcta": "respuesta_ejemplo_72",
+    "pista": "Pista para la flashcard 72",
+    "explicacion": "Explicación detallada para la flashcard 72",
+    "puntos": 20
+  },
+  {
+    "id": 73,
+    "nivel": 3,
+    "categoria": "Verbos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #73)?",
+    "respuesta_correcta": "respuesta_ejemplo_73",
+    "pista": "Pista para la flashcard 73",
+    "explicacion": "Explicación detallada para la flashcard 73",
+    "puntos": 30
+  },
+  {
+    "id": 74,
+    "nivel": 4,
+    "categoria": "Sustantivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #74)?",
+    "respuesta_correcta": "respuesta_ejemplo_74",
+    "pista": "Pista para la flashcard 74",
+    "explicacion": "Explicación detallada para la flashcard 74",
+    "puntos": 40
+  },
+  {
+    "id": 75,
+    "nivel": 5,
+    "categoria": "Adjetivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #75)?",
+    "respuesta_correcta": "respuesta_ejemplo_75",
+    "pista": "Pista para la flashcard 75",
+    "explicacion": "Explicación detallada para la flashcard 75",
+    "puntos": 50
+  },
+  {
+    "id": 76,
+    "nivel": 1,
+    "categoria": "Gramática",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #76)?",
+    "respuesta_correcta": "respuesta_ejemplo_76",
+    "pista": "Pista para la flashcard 76",
+    "explicacion": "Explicación detallada para la flashcard 76",
+    "puntos": 10
+  },
+  {
+    "id": 77,
+    "nivel": 2,
+    "categoria": "Ortografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #77)?",
+    "respuesta_correcta": "respuesta_ejemplo_77",
+    "pista": "Pista para la flashcard 77",
+    "explicacion": "Explicación detallada para la flashcard 77",
+    "puntos": 20
+  },
+  {
+    "id": 78,
+    "nivel": 3,
+    "categoria": "Ciencia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #78)?",
+    "respuesta_correcta": "respuesta_ejemplo_78",
+    "pista": "Pista para la flashcard 78",
+    "explicacion": "Explicación detallada para la flashcard 78",
+    "puntos": 30
+  },
+  {
+    "id": 79,
+    "nivel": 4,
+    "categoria": "Historia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #79)?",
+    "respuesta_correcta": "respuesta_ejemplo_79",
+    "pista": "Pista para la flashcard 79",
+    "explicacion": "Explicación detallada para la flashcard 79",
+    "puntos": 40
+  },
+  {
+    "id": 80,
+    "nivel": 5,
+    "categoria": "Geografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #80)?",
+    "respuesta_correcta": "respuesta_ejemplo_80",
+    "pista": "Pista para la flashcard 80",
+    "explicacion": "Explicación detallada para la flashcard 80",
+    "puntos": 50
+  },
+  {
+    "id": 81,
+    "nivel": 1,
+    "categoria": "Prefijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #81)?",
+    "respuesta_correcta": "respuesta_ejemplo_81",
+    "pista": "Pista para la flashcard 81",
+    "explicacion": "Explicación detallada para la flashcard 81",
+    "puntos": 10
+  },
+  {
+    "id": 82,
+    "nivel": 2,
+    "categoria": "Sufijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #82)?",
+    "respuesta_correcta": "respuesta_ejemplo_82",
+    "pista": "Pista para la flashcard 82",
+    "explicacion": "Explicación detallada para la flashcard 82",
+    "puntos": 20
+  },
+  {
+    "id": 83,
+    "nivel": 3,
+    "categoria": "Verbos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #83)?",
+    "respuesta_correcta": "respuesta_ejemplo_83",
+    "pista": "Pista para la flashcard 83",
+    "explicacion": "Explicación detallada para la flashcard 83",
+    "puntos": 30
+  },
+  {
+    "id": 84,
+    "nivel": 4,
+    "categoria": "Sustantivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #84)?",
+    "respuesta_correcta": "respuesta_ejemplo_84",
+    "pista": "Pista para la flashcard 84",
+    "explicacion": "Explicación detallada para la flashcard 84",
+    "puntos": 40
+  },
+  {
+    "id": 85,
+    "nivel": 5,
+    "categoria": "Adjetivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #85)?",
+    "respuesta_correcta": "respuesta_ejemplo_85",
+    "pista": "Pista para la flashcard 85",
+    "explicacion": "Explicación detallada para la flashcard 85",
+    "puntos": 50
+  },
+  {
+    "id": 86,
+    "nivel": 1,
+    "categoria": "Gramática",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #86)?",
+    "respuesta_correcta": "respuesta_ejemplo_86",
+    "pista": "Pista para la flashcard 86",
+    "explicacion": "Explicación detallada para la flashcard 86",
+    "puntos": 10
+  },
+  {
+    "id": 87,
+    "nivel": 2,
+    "categoria": "Ortografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #87)?",
+    "respuesta_correcta": "respuesta_ejemplo_87",
+    "pista": "Pista para la flashcard 87",
+    "explicacion": "Explicación detallada para la flashcard 87",
+    "puntos": 20
+  },
+  {
+    "id": 88,
+    "nivel": 3,
+    "categoria": "Ciencia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #88)?",
+    "respuesta_correcta": "respuesta_ejemplo_88",
+    "pista": "Pista para la flashcard 88",
+    "explicacion": "Explicación detallada para la flashcard 88",
+    "puntos": 30
+  },
+  {
+    "id": 89,
+    "nivel": 4,
+    "categoria": "Historia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #89)?",
+    "respuesta_correcta": "respuesta_ejemplo_89",
+    "pista": "Pista para la flashcard 89",
+    "explicacion": "Explicación detallada para la flashcard 89",
+    "puntos": 40
+  },
+  {
+    "id": 90,
+    "nivel": 5,
+    "categoria": "Geografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #90)?",
+    "respuesta_correcta": "respuesta_ejemplo_90",
+    "pista": "Pista para la flashcard 90",
+    "explicacion": "Explicación detallada para la flashcard 90",
+    "puntos": 50
+  },
+  {
+    "id": 91,
+    "nivel": 1,
+    "categoria": "Prefijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #91)?",
+    "respuesta_correcta": "respuesta_ejemplo_91",
+    "pista": "Pista para la flashcard 91",
+    "explicacion": "Explicación detallada para la flashcard 91",
+    "puntos": 10
+  },
+  {
+    "id": 92,
+    "nivel": 2,
+    "categoria": "Sufijos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #92)?",
+    "respuesta_correcta": "respuesta_ejemplo_92",
+    "pista": "Pista para la flashcard 92",
+    "explicacion": "Explicación detallada para la flashcard 92",
+    "puntos": 20
+  },
+  {
+    "id": 93,
+    "nivel": 3,
+    "categoria": "Verbos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #93)?",
+    "respuesta_correcta": "respuesta_ejemplo_93",
+    "pista": "Pista para la flashcard 93",
+    "explicacion": "Explicación detallada para la flashcard 93",
+    "puntos": 30
+  },
+  {
+    "id": 94,
+    "nivel": 4,
+    "categoria": "Sustantivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #94)?",
+    "respuesta_correcta": "respuesta_ejemplo_94",
+    "pista": "Pista para la flashcard 94",
+    "explicacion": "Explicación detallada para la flashcard 94",
+    "puntos": 40
+  },
+  {
+    "id": 95,
+    "nivel": 5,
+    "categoria": "Adjetivos",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #95)?",
+    "respuesta_correcta": "respuesta_ejemplo_95",
+    "pista": "Pista para la flashcard 95",
+    "explicacion": "Explicación detallada para la flashcard 95",
+    "puntos": 50
+  },
+  {
+    "id": 96,
+    "nivel": 1,
+    "categoria": "Gramática",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #96)?",
+    "respuesta_correcta": "respuesta_ejemplo_96",
+    "pista": "Pista para la flashcard 96",
+    "explicacion": "Explicación detallada para la flashcard 96",
+    "puntos": 10
+  },
+  {
+    "id": 97,
+    "nivel": 2,
+    "categoria": "Ortografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #97)?",
+    "respuesta_correcta": "respuesta_ejemplo_97",
+    "pista": "Pista para la flashcard 97",
+    "explicacion": "Explicación detallada para la flashcard 97",
+    "puntos": 20
+  },
+  {
+    "id": 98,
+    "nivel": 3,
+    "categoria": "Ciencia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #98)?",
+    "respuesta_correcta": "respuesta_ejemplo_98",
+    "pista": "Pista para la flashcard 98",
+    "explicacion": "Explicación detallada para la flashcard 98",
+    "puntos": 30
+  },
+  {
+    "id": 99,
+    "nivel": 4,
+    "categoria": "Historia",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #99)?",
+    "respuesta_correcta": "respuesta_ejemplo_99",
+    "pista": "Pista para la flashcard 99",
+    "explicacion": "Explicación detallada para la flashcard 99",
+    "puntos": 40
+  },
+  {
+    "id": 100,
+    "nivel": 5,
+    "categoria": "Geografía",
+    "pregunta": "¿Cuál es el término correcto para... (Flashcard #100)?",
+    "respuesta_correcta": "respuesta_ejemplo_100",
+    "pista": "Pista para la flashcard 100",
+    "explicacion": "Explicación detallada para la flashcard 100",
+    "puntos": 50
+  }
+]

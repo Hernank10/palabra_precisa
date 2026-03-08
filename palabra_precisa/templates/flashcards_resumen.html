@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .nivel-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+        cursor: pointer;
+        border-left: 5px solid;
+    }
+    
+    .nivel-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    .nivel-1 { border-left-color: #28a745; }
+    .nivel-2 { border-left-color: #17a2b8; }
+    .nivel-3 { border-left-color: #ffc107; }
+    .nivel-4 { border-left-color: #fd7e14; }
+    .nivel-5 { border-left-color: #dc3545; }
+    
+    .progress {
+        height: 10px;
+        border-radius: 5px;
+    }
+    
+    .stats-badge {
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+</style>
+
+<div class="container mt-4">
+    <h1 class="mb-4">📊 Resumen de Flashcards</h1>
+    
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>{{ total_flashcards }}</h3>
+                    <p>Total Flashcards</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>{{ completadas }}</h3>
+                    <p>Completadas</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>{{ promedio_acierto }}%</h3>
+                    <p>Promedio de aciertos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <h3 class="mb-3">Niveles disponibles:</h3>
+    
+    {% for nivel in range(1, 6) %}
+    <div class="nivel-card nivel-{{ nivel }}" onclick="window.location.href='/flashcards?nivel={{ nivel }}'">
+        <div class="row align-items-center">
+            <div class="col-md-2">
+                <span class="badge level-{{ nivel }}" style="font-size: 1.2rem; padding: 10px 20px;">
+                    Nivel {{ nivel }}
+                </span>
+            </div>
+            <div class="col-md-3">
+                <h4>{{ stats_niveles[nivel-1].total }} flashcards</h4>
+                <p>{{ stats_niveles[nivel-1].completadas }} completadas</p>
+            </div>
+            <div class="col-md-4">
+                <div class="progress">
+                    <div class="progress-bar bg-{{ ['success', 'info', 'warning', 'orange', 'danger'][nivel-1] }}" 
+                         style="width: {{ stats_niveles[nivel-1].progreso }}%"></div>
+                </div>
+                <small class="text-muted">{{ stats_niveles[nivel-1].progreso }}% completado</small>
+            </div>
+            <div class="col-md-3 text-end">
+                <span class="stats-badge bg-light">
+                    🎯 {{ stats_niveles[nivel-1].puntos }} pts
+                </span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
+    <div class="text-center mt-4">
+        <a href="/flashcards/1?nivel=1" class="btn btn-primary btn-lg">
+            🚀 Comenzar práctica
+        </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,357 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .flashcard-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .flashcard {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        margin-bottom: 30px;
+        transition: transform 0.3s;
+        cursor: pointer;
+        min-height: 300px;
+        position: relative;
+    }
+    
+    .flashcard:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+    
+    .flashcard-front, .flashcard-back {
+        padding: 40px;
+        border-radius: 15px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .flashcard-front {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+    
+    .flashcard-back {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        color: white;
+        display: none;
+    }
+    
+    .flashcard.revealed .flashcard-front {
+        display: none;
+    }
+    
+    .flashcard.revealed .flashcard-back {
+        display: flex;
+    }
+    
+    .level-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+        z-index: 10;
+    }
+    
+    .level-1 { background: #28a745; color: white; }
+    .level-2 { background: #17a2b8; color: white; }
+    .level-3 { background: #ffc107; color: black; }
+    .level-4 { background: #fd7e14; color: white; }
+    .level-5 { background: #dc3545; color: white; }
+    
+    .pista {
+        background: rgba(255,255,255,0.2);
+        padding: 10px;
+        border-radius: 10px;
+        margin: 15px 0;
+        font-style: italic;
+    }
+    
+    .answer-input {
+        margin-top: 20px;
+    }
+    
+    .feedback {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        display: none;
+    }
+    
+    .feedback.correct {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+    
+    .feedback.incorrect {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+    
+    .progress-bar-custom {
+        height: 10px;
+        border-radius: 5px;
+        background: #e9ecef;
+        margin: 20px 0;
+    }
+    
+    .progress-fill {
+        height: 100%;
+        border-radius: 5px;
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        transition: width 0.3s;
+    }
+    
+    .nivel-selector {
+        margin: 30px 0;
+    }
+    
+    .nivel-btn {
+        margin: 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+    
+    .nivel-btn.active {
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    
+    .stats-card {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .hint-btn {
+        background: rgba(255,255,255,0.3);
+        border: 2px solid white;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 25px;
+        transition: all 0.3s;
+    }
+    
+    .hint-btn:hover {
+        background: white;
+        color: #764ba2;
+    }
+</style>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="mb-4">🎴 Flashcards Interactivas</h1>
+            <p>Practica con 100 flashcards divididas por niveles. Voltea la tarjeta para ver la respuesta.</p>
+        </div>
+        <div class="col-md-4 text-end">
+            <div class="stats-card">
+                <h5>Tu progreso</h5>
+                <div class="d-flex justify-content-between">
+                    <span>Nivel actual:</span>
+                    <span class="badge level-{{ nivel_actual }}">Nivel {{ nivel_actual }}</span>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <span>Puntos:</span>
+                    <span class="badge bg-primary">{{ current_user.puntos_totales }}</span>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                    <span>Racha:</span>
+                    <span class="badge bg-success">{{ current_user.racha_actual }} 🔥</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Selector de niveles -->
+    <div class="nivel-selector text-center">
+        <h4>Selecciona nivel:</h4>
+        <div>
+            {% for nivel in range(1, 6) %}
+            <button class="nivel-btn level-{{ nivel }} {% if nivel == nivel_actual %}active{% endif %}"
+                    onclick="cambiarNivel({{ nivel }})">
+                Nivel {{ nivel }}
+            </button>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Progreso -->
+    <div class="progress-bar-custom">
+        <div class="progress-fill" id="progresoFlashcards" style="width: {{ progreso }}%"></div>
+    </div>
+    <div class="d-flex justify-content-between mb-4">
+        <span>Flashcard <span id="flashcardActual">{{ flashcard_actual }}</span>/{{ total_flashcards }}</span>
+        <span id="puntuacionNivel">{{ puntos_nivel }} puntos en este nivel</span>
+    </div>
+    
+    <!-- Flashcard actual -->
+    <div class="flashcard-container">
+        <div class="flashcard" id="flashcard" onclick="voltearFlashcard(event)">
+            <div class="level-badge level-{{ flashcard.nivel }}">
+                Nivel {{ flashcard.nivel }} · {{ flashcard.puntos }} pts
+            </div>
+            
+            <!-- Frente (pregunta) -->
+            <div class="flashcard-front">
+                <h2 class="mb-4">{{ flashcard.pregunta }}</h2>
+                <p class="text-white-50">Categoría: {{ flashcard.categoria }}</p>
+                <button class="hint-btn mt-3" onclick="event.stopPropagation(); mostrarPista()">
+                    💡 Mostrar pista
+                </button>
+                <div id="pista" class="pista" style="display: none;">
+                    {{ flashcard.pista }}
+                </div>
+            </div>
+            
+            <!-- Dorso (respuesta) -->
+            <div class="flashcard-back">
+                <h3 class="mb-3">Respuesta:</h3>
+                <h2 class="mb-4">{{ flashcard.respuesta_correcta }}</h2>
+                <p class="mb-4">{{ flashcard.explicacion }}</p>
+                
+                <!-- Input para respuesta del usuario -->
+                <div class="answer-input">
+                    <input type="text" 
+                           class="form-control form-control-lg" 
+                           id="respuestaUsuario" 
+                           placeholder="Escribe tu respuesta..."
+                           onclick="event.stopPropagation()">
+                    <button class="btn btn-light btn-lg mt-3 w-100" 
+                            onclick="event.stopPropagation(); verificarRespuesta({{ flashcard.id }})">
+                        Verificar respuesta
+                    </button>
+                </div>
+                
+                <!-- Feedback -->
+                <div id="feedback" class="feedback"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Controles de navegación -->
+    <div class="d-flex justify-content-between mt-4">
+        <button class="btn btn-outline-primary btn-lg" onclick="flashcardAnterior()" 
+                {% if flashcard_actual == 1 %}disabled{% endif %}>
+            ← Anterior
+        </button>
+        <button class="btn btn-outline-primary btn-lg" onclick="volverAlFrente()">
+            🔄 Volver al frente
+        </button>
+        <button class="btn btn-outline-primary btn-lg" onclick="flashcardSiguiente()"
+                {% if flashcard_actual == total_flashcards %}disabled{% endif %}>
+            Siguiente →
+        </button>
+    </div>
+</div>
+
+<script>
+let flashcardActual = {{ flashcard_actual }};
+let totalFlashcards = {{ total_flashcards }};
+let nivelActual = {{ nivel_actual }};
+let puntosNivel = {{ puntos_nivel }};
+
+function voltearFlashcard(event) {
+    // Evitar que se voltee si se hizo clic en un botón o input
+    if (event.target.tagName === 'BUTTON' || event.target.tagName === 'INPUT') {
+        return;
+    }
+    document.getElementById('flashcard').classList.toggle('revealed');
+}
+
+function volverAlFrente() {
+    document.getElementById('flashcard').classList.remove('revealed');
+    document.getElementById('feedback').style.display = 'none';
+    document.getElementById('respuestaUsuario').value = '';
+}
+
+function mostrarPista() {
+    document.getElementById('pista').style.display = 'block';
+    setTimeout(() => {
+        document.getElementById('pista').style.display = 'none';
+    }, 5000);
+}
+
+function cambiarNivel(nivel) {
+    window.location.href = `/flashcards?nivel=${nivel}`;
+}
+
+function flashcardAnterior() {
+    if (flashcardActual > 1) {
+        window.location.href = `/flashcards/${flashcardActual - 1}?nivel=${nivelActual}`;
+    }
+}
+
+function flashcardSiguiente() {
+    if (flashcardActual < totalFlashcards) {
+        window.location.href = `/flashcards/${flashcardActual + 1}?nivel=${nivelActual}`;
+    }
+}
+
+function verificarRespuesta(flashcardId) {
+    const respuesta = document.getElementById('respuestaUsuario').value.trim();
+    
+    if (!respuesta) {
+        alert('Por favor, escribe una respuesta');
+        return;
+    }
+    
+    fetch('/api/verificar_flashcard', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            flashcard_id: flashcardId,
+            respuesta: respuesta,
+            tiempo: 0  // Podrías medir el tiempo real
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        const feedback = document.getElementById('feedback');
+        feedback.style.display = 'block';
+        
+        if (data.correcto) {
+            feedback.className = 'feedback correct';
+            feedback.innerHTML = `
+                <strong>✅ ¡Correcto!</strong><br>
+                +${data.puntos} puntos<br>
+                ${data.explicacion}
+            `;
+            // Actualizar puntuación mostrada
+            document.querySelector('.badge.bg-primary').textContent = data.puntos_totales;
+            document.querySelector('.badge.bg-success').textContent = data.racha + ' 🔥';
+            puntosNivel += data.puntos;
+            document.getElementById('puntuacionNivel').textContent = puntosNivel + ' puntos en este nivel';
+        } else {
+            feedback.className = 'feedback incorrect';
+            feedback.innerHTML = `
+                <strong>❌ Incorrecto</strong><br>
+                La respuesta correcta es: <strong>${data.respuesta_correcta}</strong><br>
+                ${data.explicacion}
+            `;
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error al verificar la respuesta');
+    });
+}
+</script>
+{% endblock %}

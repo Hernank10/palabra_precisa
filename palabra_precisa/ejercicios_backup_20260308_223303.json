@@ -1,0 +1,767 @@
+[
+    {
+        "id": 1,
+        "categoria": "Prefijos",
+        "pregunta": "¿Cuál es el término correcto para referirse a algo anterior al diluvio?",
+        "opciones": ["antediluviano", "antidiluviano", "prediluviano", "postdiluviano"],
+        "respuesta_correcta": "antediluviano",
+        "explicacion": "'ante-' significa 'anterior', mientras que 'anti-' significa 'contra'",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 2,
+        "categoria": "Frecuencia",
+        "pregunta": "Si algo ocurre cada dos meses, se dice que es:",
+        "opciones": ["bimensual", "bimestral", "trimestral", "semestral"],
+        "respuesta_correcta": "bimestral",
+        "explicacion": "'Bimestral' = cada dos meses, 'bimensual' = dos veces al mes",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 3,
+        "categoria": "Gentilicios",
+        "pregunta": "Una persona de Escocia es:",
+        "opciones": ["inglés", "británico", "escocés", "galés"],
+        "respuesta_correcta": "británico",
+        "explicacion": "Todos los escoceses son británicos, pero no todos son ingleses",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 4,
+        "categoria": "Verbos",
+        "pregunta": "Completa: 'Él ______ haber llegado tarde por el tráfico' (probabilidad)",
+        "opciones": ["debe", "debe de", "debió", "debía"],
+        "respuesta_correcta": "debe de",
+        "explicacion": "'debe de' expresa probabilidad, 'debe' expresa obligación",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 5,
+        "categoria": "Verbos",
+        "pregunta": "¿Cuál es el significado correcto de 'cancelar'?",
+        "opciones": ["pagar", "anular", "confirmar", "aplazar"],
+        "respuesta_correcta": "anular",
+        "explicacion": "'Cancelar' significa anular, derogar; no pagar",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 6,
+        "categoria": "Prefijos",
+        "pregunta": "El prefijo que significa 'contra' es:",
+        "opciones": ["ante-", "anti-", "pre-", "post-"],
+        "respuesta_correcta": "anti-",
+        "explicacion": "'anti-' indica oposición, mientras que 'ante-' indica anterioridad",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 7,
+        "categoria": "Sustantivos",
+        "pregunta": "¿Qué significa 'alma mater'?",
+        "opciones": ["madre biológica", "universidad", "libro sagrado", "institución religiosa"],
+        "respuesta_correcta": "universidad",
+        "explicacion": "'Alma mater' significa 'madre nutricia' y se refiere a la universidad",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 8,
+        "categoria": "Verbos",
+        "pregunta": "¿Cuál es la diferencia entre 'conlleva' y 'lleva a'?",
+        "opciones": [
+            "son sinónimos",
+            "'conlleva' implica condiciones, 'lleva a' expresa consecuencias",
+            "'conlleva' es más formal",
+            "no hay diferencia"
+        ],
+        "respuesta_correcta": "'conlleva' implica condiciones, 'lleva a' expresa consecuencias",
+        "explicacion": "'Conlleva' alude a condiciones, 'lleva a' expresa consecuencias",
+        "dificultad": 4,
+        "puntos": 25
+    },
+    {
+        "id": 9,
+        "categoria": "Verbos",
+        "pregunta": "¿Qué significa 'cotizar'?",
+        "opciones": ["preguntar el precio", "dar el precio", "regatear", "comprar"],
+        "respuesta_correcta": "dar el precio",
+        "explicacion": "'Cotizar' significa 'dar el precio', no 'pedir el precio'",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 10,
+        "categoria": "Sustantivos",
+        "pregunta": "¿Cuál es el término correcto para un profesor jubilado con honores?",
+        "opciones": ["meritorio", "emérito", "emeritus", "jubilado"],
+        "respuesta_correcta": "emérito",
+        "explicacion": "'Emérito' es jubilado con honores, 'meritorio' es que tiene mérito",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 11,
+        "categoria": "Sustantivos",
+        "pregunta": "¿Qué se hace con un carro que se va a desarmar?",
+        "opciones": ["deshuesar", "desguazar", "desarmar", "desmantelar"],
+        "respuesta_correcta": "desguazar",
+        "explicacion": "'Deshuesar' es quitar huesos, 'desguazar' es desarmar en partes",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 12,
+        "categoria": "Frecuencia",
+        "pregunta": "¿Cuántas veces al año ocurre algo bimestral?",
+        "opciones": ["6 veces", "12 veces", "24 veces", "4 veces"],
+        "respuesta_correcta": "6 veces",
+        "explicacion": "Bimestral = cada dos meses → 12/2 = 6 veces al año",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 13,
+        "categoria": "Frecuencia",
+        "pregunta": "¿Cuántas veces al año ocurre algo bimensual?",
+        "opciones": ["6 veces", "12 veces", "24 veces", "4 veces"],
+        "respuesta_correcta": "24 veces",
+        "explicacion": "Bimensual = dos veces al mes → 12 × 2 = 24 veces al año",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 14,
+        "categoria": "Gentilicios",
+        "pregunta": "Un habitante de Gales es:",
+        "opciones": ["inglés", "británico", "escocés", "irlandés"],
+        "respuesta_correcta": "británico",
+        "explicacion": "Gales es parte de Gran Bretaña, por lo tanto son británicos",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 15,
+        "categoria": "Verbos",
+        "pregunta": "Completa: 'Para ser alcalde se ______ estudios específicos'",
+        "opciones": ["conlleva", "lleva a", "requiere", "necesita"],
+        "respuesta_correcta": "conlleva",
+        "explicacion": "'Conlleva' implica condiciones necesarias",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 16,
+        "categoria": "Prefijos",
+        "pregunta": "¿Cuál es el antónimo de 'posguerra'?",
+        "opciones": ["anteguerra", "preguerra", "guerra", "prebélico"],
+        "respuesta_correcta": "preguerra",
+        "explicacion": "'Pre-' significa antes, 'pos-' significa después",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 17,
+        "categoria": "Ciencia",
+        "pregunta": "¿Cuál es la diferencia entre virus y bacteria?",
+        "opciones": [
+            "son lo mismo",
+            "virus requiere huésped, bacteria es organismo unicelular",
+            "bacteria requiere huésped, virus es organismo unicelular",
+            "ambos requieren huésped"
+        ],
+        "respuesta_correcta": "virus requiere huésped, bacteria es organismo unicelular",
+        "explicacion": "Los virus necesitan un huésped para replicarse; las bacterias son organismos independientes",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 18,
+        "categoria": "Ciencia",
+        "pregunta": "¿Qué son los antibióticos efectivos contra?",
+        "opciones": ["virus", "bacterias", "hongos", "parásitos"],
+        "respuesta_correcta": "bacterias",
+        "explicacion": "Los antibióticos combaten bacterias, no virus",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 19,
+        "categoria": "Geografía",
+        "pregunta": "¿Cuál es la diferencia entre clima y tiempo?",
+        "opciones": [
+            "son sinónimos",
+            "clima es a largo plazo, tiempo es momentáneo",
+            "tiempo es a largo plazo, clima es momentáneo",
+            "no hay diferencia"
+        ],
+        "respuesta_correcta": "clima es a largo plazo, tiempo es momentáneo",
+        "explicacion": "El clima son condiciones a largo plazo, el tiempo es el estado atmosférico actual",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 20,
+        "categoria": "Finanzas",
+        "pregunta": "En un contrato, ¿qué significa una cuota bimestral de $1,000,000?",
+        "opciones": ["$6,000,000 anuales", "$12,000,000 anuales", "$24,000,000 anuales", "$3,000,000 anuales"],
+        "respuesta_correcta": "$6,000,000 anuales",
+        "explicacion": "Bimestral = cada dos meses → 6 pagos al año = $6,000,000",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 21,
+        "categoria": "Política",
+        "pregunta": "¿Cuál es la diferencia entre democracia y república?",
+        "opciones": [
+            "son lo mismo",
+            "democracia es sistema de gobierno, república es forma de estado sin monarquía",
+            "república es sistema de gobierno, democracia es forma de estado",
+            "no hay diferencia"
+        ],
+        "respuesta_correcta": "democracia es sistema de gobierno, república es forma de estado sin monarquía",
+        "explicacion": "Democracia se refiere a cómo se gobierna, república a la organización del estado",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 22,
+        "categoria": "Filosofía",
+        "pregunta": "¿Cuál es la diferencia entre ética y moral?",
+        "opciones": [
+            "son sinónimos",
+            "ética es principios filosóficos, moral son normas sociales",
+            "moral es principios filosóficos, ética son normas sociales",
+            "no hay diferencia"
+        ],
+        "respuesta_correcta": "ética es principios filosóficos, moral son normas sociales",
+        "explicacion": "La ética estudia principios universales, la moral son normas sociales específicas",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 23,
+        "categoria": "Medicina",
+        "pregunta": "¿Qué significa 'hiper-'?",
+        "opciones": ["deficiencia", "exceso", "normal", "mitad"],
+        "respuesta_correcta": "exceso",
+        "explicacion": "'Hiper-' significa exceso, 'hipo-' significa deficiencia",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 24,
+        "categoria": "Medicina",
+        "pregunta": "¿Qué significa 'hipo-'?",
+        "opciones": ["exceso", "deficiencia", "normal", "mitad"],
+        "respuesta_correcta": "deficiencia",
+        "explicacion": "'Hipo-' significa deficiencia, 'hiper-' significa exceso",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 25,
+        "categoria": "Idiomas",
+        "pregunta": "Una persona que habla dos idiomas es:",
+        "opciones": ["monolingüe", "bilingüe", "trilingüe", "políglota"],
+        "respuesta_correcta": "bilingüe",
+        "explicacion": "'Bi-' significa dos, 'tri-' tres, 'mono-' uno",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 26,
+        "categoria": "Familia",
+        "pregunta": "¿Cómo se llama correctamente al ex-cónyuge?",
+        "opciones": ["antimarido", "exmarido", "premarido", "posmarido"],
+        "respuesta_correcta": "exmarido",
+        "explicacion": "'Ex-' significa anterior, 'anti-' significa contra",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 27,
+        "categoria": "Geometría",
+        "pregunta": "¿Cómo se llama la mitad de una esfera?",
+        "opciones": ["semiesfera", "hemisferio", "media esfera", "demiesfera"],
+        "respuesta_correcta": "hemisferio",
+        "explicacion": "En geometría, 'hemi-' es el prefijo para mitad de una esfera",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 28,
+        "categoria": "Periodismo",
+        "pregunta": "¿Cuál es la diferencia entre redactar y editar?",
+        "opciones": [
+            "son sinónimos",
+            "redactar es escribir, editar es modificar",
+            "editar es escribir, redactar es modificar",
+            "no hay diferencia"
+        ],
+        "respuesta_correcta": "redactar es escribir, editar es modificar",
+        "explicacion": "Redactar es crear contenido, editar es revisar y modificar",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 29,
+        "categoria": "Derecho",
+        "pregunta": "¿Cuál es la diferencia entre adquirir y comprar?",
+        "opciones": [
+            "son sinónimos",
+            "adquirir no requiere dinero, comprar sí",
+            "comprar no requiere dinero, adquirir sí",
+            "no hay diferencia"
+        ],
+        "respuesta_correcta": "adquirir no requiere dinero, comprar sí",
+        "explicacion": "Se puede adquirir por herencia, donación, etc.; comprar implica transacción económica",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 30,
+        "categoria": "Derecho",
+        "pregunta": "¿Cuál es la diferencia entre imputar e inculpar?",
+        "opciones": [
+            "son sinónimos",
+            "imputar es atribuir responsabilidad, inculpar es declarar culpable",
+            "inculpar es atribuir responsabilidad, imputar es declarar culpable",
+            "no hay diferencia"
+        ],
+        "respuesta_correcta": "imputar es atribuir responsabilidad, inculpar es declarar culpable",
+        "explicacion": "Se imputa un delito, se inculpa después de las pruebas",
+        "dificultad": 4,
+        "puntos": 25
+    },
+    {
+        "id": 31,
+        "categoria": "Derecho",
+        "pregunta": "¿Qué significa 'jurisprudencia'?",
+        "opciones": ["conjunto de leyes", "decisiones judiciales que sientan precedentes", "código penal", "constitución"],
+        "respuesta_correcta": "decisiones judiciales que sientan precedentes",
+        "explicacion": "La jurisprudencia son las decisiones de tribunales que establecen precedentes",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 32,
+        "categoria": "Derecho",
+        "pregunta": "¿Qué es un 'contrato'?",
+        "opciones": ["acuerdo informal", "acuerdo con obligaciones legales", "promesa verbal", "documento sin valor"],
+        "respuesta_correcta": "acuerdo con obligaciones legales",
+        "explicacion": "Un contrato es un acuerdo jurídicamente vinculante",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 33,
+        "categoria": "Derecho",
+        "pregunta": "¿Quién es el 'arrendador'?",
+        "opciones": ["quien alquila", "quien recibe el alquiler", "el inquilino", "el abogado"],
+        "respuesta_correcta": "quien alquila",
+        "explicacion": "Arrendador es quien da en alquiler, arrendatario quien recibe",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 34,
+        "categoria": "Derecho",
+        "pregunta": "¿Quién es el 'arrendatario'?",
+        "opciones": ["quien alquila", "quien paga el alquiler", "el dueño", "el fiador"],
+        "respuesta_correcta": "quien paga el alquiler",
+        "explicacion": "Arrendatario es quien toma en alquiler",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 35,
+        "categoria": "Gramática",
+        "pregunta": "¿Cuál es la diferencia entre 'por qué', 'porque' y 'porqué'?",
+        "opciones": [
+            "son iguales",
+            "por qué: pregunta, porque: respuesta, porqué: sustantivo",
+            "porque: pregunta, por qué: respuesta",
+            "no hay diferencia"
+        ],
+        "respuesta_correcta": "por qué: pregunta, porque: respuesta, porqué: sustantivo",
+        "explicacion": "'Por qué' para preguntas, 'porque' para respuestas, 'el porqué' es sustantivo",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 36,
+        "categoria": "Gramática",
+        "pregunta": "¿Cuándo se usa 'sino' y 'si no'?",
+        "opciones": [
+            "son iguales",
+            "sino: contraposición, si no: condición",
+            "si no: contraposición, sino: condición",
+            "nunca se usan"
+        ],
+        "respuesta_correcta": "sino: contraposición, si no: condición",
+        "explicacion": "'Sino' indica contraposición, 'si no' expresa condición",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 37,
+        "categoria": "Gramática",
+        "pregunta": "¿Cuál es la forma correcta: 'había' o 'habían' muchas personas?",
+        "opciones": ["había", "habían", "ambas", "ninguna"],
+        "respuesta_correcta": "había",
+        "explicacion": "El verbo haber es impersonal y va siempre en singular: 'había muchas personas'",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 38,
+        "categoria": "Gramática",
+        "pregunta": "¿Qué significa la expresión 'a priori'?",
+        "opciones": ["después de", "con anterioridad", "al mismo tiempo", "posteriormente"],
+        "respuesta_correcta": "con anterioridad",
+        "explicacion": "'A priori' significa con anterioridad a la experiencia",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 39,
+        "categoria": "Gramática",
+        "pregunta": "¿Qué significa la expresión 'a posteriori'?",
+        "opciones": ["antes de", "después de", "durante", "siempre"],
+        "respuesta_correcta": "después de",
+        "explicacion": "'A posteriori' significa con posterioridad a la experiencia",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 40,
+        "categoria": "Ortografía",
+        "pregunta": "¿Cuál es la forma correcta: 'examen' o 'exámen'?",
+        "opciones": ["examen", "exámen", "ambas", "ninguna"],
+        "respuesta_correcta": "examen",
+        "explicacion": "'Examen' es palabra grave terminada en 'n', no lleva tilde",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 41,
+        "categoria": "Ortografía",
+        "pregunta": "¿Cuándo se tilda 'solo'?",
+        "opciones": ["siempre", "nunca", "cuando es adverbio y hay ambigüedad", "solo como adjetivo"],
+        "respuesta_correcta": "cuando es adverbio y hay ambigüedad",
+        "explicacion": "Según la RAE, 'solo' puede tildarse cuando es adverbio y hay riesgo de ambigüedad",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 42,
+        "categoria": "Ortografía",
+        "pregunta": "¿Cuál es el plural correcto de 'régimen'?",
+        "opciones": ["régimens", "regímenes", "régimenes", "regimenes"],
+        "respuesta_correcta": "regímenes",
+        "explicacion": "El plural de 'régimen' es 'regímenes', con tilde en la i",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 43,
+        "categoria": "Ortografía",
+        "pregunta": "¿Cuál es el plural correcto de 'carácter'?",
+        "opciones": ["carácteres", "caracteres", "caracteres", "carácter"],
+        "respuesta_correcta": "caracteres",
+        "explicacion": "El plural de 'carácter' es 'caracteres', sin tilde",
+        "dificultad": 4,
+        "puntos": 25
+    },
+    {
+        "id": 44,
+        "categoria": "Ortografía",
+        "pregunta": "¿Cuándo se usa 'conque'?",
+        "opciones": [
+            "como pregunta",
+            "como conjunción: 'así que'",
+            "como preposición",
+            "nunca"
+        ],
+        "respuesta_correcta": "como conjunción: 'así que'",
+        "explicacion": "'Conque' es conjunción que equivale a 'así que'",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 45,
+        "categoria": "Ortografía",
+        "pregunta": "¿Cuándo se usa 'con qué'?",
+        "opciones": [
+            "en preguntas directas e indirectas",
+            "siempre",
+            "nunca",
+            "solo en exclamaciones"
+        ],
+        "respuesta_correcta": "en preguntas directas e indirectas",
+        "explicacion": "'Con qué' se usa en oraciones interrogativas y exclamativas",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 46,
+        "categoria": "Ortografía",
+        "pregunta": "¿Cuándo se usa 'porqué' junto?",
+        "opciones": [
+            "como sustantivo (el porqué)",
+            "en preguntas",
+            "siempre",
+            "nunca"
+        ],
+        "respuesta_correcta": "como sustantivo (el porqué)",
+        "explicacion": "'El porqué' es un sustantivo que significa 'la razón'",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 47,
+        "categoria": "Vocabulario",
+        "pregunta": "¿Qué significa 'ósculo'?",
+        "opciones": ["abrazo", "beso", "saludo", "reverencia"],
+        "respuesta_correcta": "beso",
+        "explicacion": "'Ósculo' es un término culto para 'beso'",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 48,
+        "categoria": "Vocabulario",
+        "pregunta": "¿Qué significa 'álgido'?",
+        "opciones": ["muy frío", "momento crítico", "brillante", "oscuro"],
+        "respuesta_correcta": "momento crítico",
+        "explicacion": "'Álgido' significa 'del momento más crítico o culminante'",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 49,
+        "categoria": "Vocabulario",
+        "pregunta": "¿Qué significa 'obsoleto'?",
+        "opciones": ["nuevo", "anticuado", "moderno", "útil"],
+        "respuesta_correcta": "anticuado",
+        "explicacion": "'Obsoleto' significa que ya no está en uso o está anticuado",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 50,
+        "categoria": "Vocabulario",
+        "pregunta": "¿Qué significa 'idiosincrasia'?",
+        "opciones": ["enfermedad", "rasgos característicos", "medicamento", "costumbre extranjera"],
+        "respuesta_correcta": "rasgos característicos",
+        "explicacion": "'Idiosincrasia' son los rasgos distintivos de un individuo o grupo",
+        "dificultad": 3,
+        "puntos": 20
+    },
+    {
+        "id": 51,
+        "categoria": "Ciencia",
+        "pregunta": "¿Qué es la fotosíntesis?",
+        "opciones": [
+            "respiración de las plantas",
+            "proceso de convertir luz en energía",
+            "reproducción vegetal",
+            "absorción de agua"
+        ],
+        "respuesta_correcta": "proceso de convertir luz en energía",
+        "explicacion": "La fotosíntesis convierte energía lumínica en química",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 52,
+        "categoria": "Ciencia",
+        "pregunta": "¿Qué estudia la entomología?",
+        "opciones": ["insectos", "plantas", "animales", "rocas"],
+        "respuesta_correcta": "insectos",
+        "explicacion": "La entomología es la ciencia que estudia los insectos",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 53,
+        "categoria": "Ciencia",
+        "pregunta": "¿Qué estudia la etimología?",
+        "opciones": ["insectos", "origen de las palabras", "comportamiento", "enfermedades"],
+        "respuesta_correcta": "origen de las palabras",
+        "explicacion": "La etimología estudia el origen de las palabras",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 54,
+        "categoria": "Ciencia",
+        "pregunta": "¿Qué es un 'átomo'?",
+        "opciones": [
+            "unidad básica de la materia",
+            "partícula subatómica",
+            "molécula",
+            "célula"
+        ],
+        "respuesta_correcta": "unidad básica de la materia",
+        "explicacion": "El átomo es la unidad básica de la materia",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 55,
+        "categoria": "Ciencia",
+        "pregunta": "¿Qué es una 'célula'?",
+        "opciones": [
+            "unidad básica de la vida",
+            "partícula",
+            "átomo",
+            "tejido"
+        ],
+        "respuesta_correcta": "unidad básica de la vida",
+        "explicacion": "La célula es la unidad básica de los seres vivos",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 56,
+        "categoria": "Geografía",
+        "pregunta": "¿Cuál es la diferencia entre 'México' y 'Ciudad de México'?",
+        "opciones": [
+            "son lo mismo",
+            "México es el país, Ciudad de México es la capital",
+            "México es la capital, Ciudad de México es el país",
+            "no existen"
+        ],
+        "respuesta_correcta": "México es el país, Ciudad de México es la capital",
+        "explicacion": "México es el país, su capital es Ciudad de México",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 57,
+        "categoria": "Geografía",
+        "pregunta": "¿Qué es un 'istmo'?",
+        "opciones": [
+            "brazo de mar",
+            "franja de tierra que une dos continentes",
+            "montaña",
+            "río"
+        ],
+        "respuesta_correcta": "franja de tierra que une dos continentes",
+        "explicacion": "Un istmo es una franja de tierra que une dos masas continentales",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 58,
+        "categoria": "Geografía",
+        "pregunta": "¿Qué es un 'archipiélago'?",
+        "opciones": [
+            "isla grande",
+            "conjunto de islas",
+            "península",
+            "golfo"
+        ],
+        "respuesta_correcta": "conjunto de islas",
+        "explicacion": "Un archipiélago es un conjunto de islas",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 59,
+        "categoria": "Historia",
+        "pregunta": "¿Qué significa 'BC' en fechas históricas?",
+        "opciones": [
+            "Before Christ (antes de Cristo)",
+            "Buenos días",
+            "Bajo cero",
+            "Base central"
+        ],
+        "respuesta_correcta": "Before Christ (antes de Cristo)",
+        "explicacion": "BC significa 'Before Christ' (antes de Cristo)",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 60,
+        "categoria": "Historia",
+        "pregunta": "¿Qué significa 'AD' en fechas históricas?",
+        "opciones": [
+            "Anno Domini (después de Cristo)",
+            "Años después",
+            "Antes de Dios",
+            "Año actual"
+        ],
+        "respuesta_correcta": "Anno Domini (después de Cristo)",
+        "explicacion": "AD significa 'Anno Domini' (después de Cristo)",
+        "dificultad": 1,
+        "puntos": 10
+    },
+    {
+        "id": 61,
+        "categoria": "Matemáticas",
+        "pregunta": "¿Qué es un 'número primo'?",
+        "opciones": [
+            "número divisible solo por 1 y sí mismo",
+            "número par",
+            "número impar",
+            "múltiplo de 2"
+        ],
+        "respuesta_correcta": "número divisible solo por 1 y sí mismo",
+        "explicacion": "Un número primo solo es divisible por 1 y por sí mismo",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 62,
+        "categoria": "Matemáticas",
+        "pregunta": "¿Qué es el 'teorema de Pitágoras'?",
+        "opciones": [
+            "a² + b² = c²",
+            "a + b = c",
+            "a × b = c",
+            "a - b = c"
+        ],
+        "respuesta_correcta": "a² + b² = c²",
+        "explicacion": "El teorema de Pitágoras relaciona los catetos con la hipotenusa",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 63,
+        "categoria": "Música",
+        "pregunta": "¿Qué es una 'sinfonía'?",
+        "opciones": [
+            "instrumento musical",
+            "composición orquestal extensa",
+            "canción corta",
+            "grupo de músicos"
+        ],
+        "respuesta_correcta": "composición orquestal extensa",
+        "explicacion": "Una sinfonía es una composición musical para orquesta",
+        "dificultad": 2,
+        "puntos": 15
+    },
+    {
+        "id": 64,
+        "categoria": "Arte",
+        "pregunta": "¿Qué es un 'fresco' en pintura?",
+        "opciones": [
+            "pintura sobre pared recién enlucida",
+            "pintura fría",
+            "pintura al óleo",
+            "acuarela"
+        ],
+        "respuesta_correcta": "pintura sobre pared recién enlucida",
+        "explicacion": "El fresco se pinta sobre yeso fresco con pigmentos disueltos en agua",
+        "dificultad": 3,
+        "puntos": 20
+    }
+]
