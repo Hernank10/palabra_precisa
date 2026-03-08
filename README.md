@@ -40,5 +40,5 @@ pip (gestor de paquetes de Python)
 Git
 Pasos de Instalación
 Clonar el repositorio
-git clone https://github.com/tu-usuario/palabra_precisa.git
+git clone https://github.com/Hernank10/palabra_precisa.git
 cd palabra_precisa
